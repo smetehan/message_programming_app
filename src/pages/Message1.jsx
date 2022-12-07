@@ -35,7 +35,9 @@ const Message = () => {
 
   useEffect(() => {
     getMessage();
-    getMessage_2();
+    setInterval(() => {
+      getMessage_2();
+    }, 3000);
   }, [setApi2]);
   const handleDelMessage1 = async (id) => {
     await axios.delete(`${BASE_URL}/${id}`);
