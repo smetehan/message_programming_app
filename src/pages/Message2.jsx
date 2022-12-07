@@ -35,7 +35,10 @@ const Message = () => {
   };
 
   useEffect(() => {
-    getMessage();
+    setInterval(() => {
+      getMessage();
+    }, 3000);
+
     getMessage_2();
   }, [setApi]);
   const handleDelMessage1 = async (id) => {
