@@ -38,7 +38,7 @@ const Message = () => {
     setInterval(() => {
       getMessage();
       getMessage_2();
-    }, 3000);
+    }, 10000);
   }, [setApi]);
   const handleDelMessage1 = async (id) => {
     await axios.delete(`${BASE_URL}/${id}`);
